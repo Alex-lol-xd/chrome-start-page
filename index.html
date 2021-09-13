@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Home Page</title>
 	</head>
-	<body>
-		<input type="text" class="searchBox" id="searchBox" />
+		<h1 id="clock" class="clock"></h1>
+		<div class="prompts">
+			<span class="promptA">➜ </span>
+			<span class="promptB">(search): </span>
+		</div>
+		<input type="text" class="searchBox" id="searchBox" >
+
+		<div class="navbar">
+			<img id="youtube" src="./navbar icons/youtube-brands.svg" width="40" />
+			<img id="twitch" src="./navbar icons/twitch-brands.svg" width="40" />
+			<img id="gmail" src="./navbar icons/envelope-solid.svg" width="40" />
+			<img id="github" src="./navbar icons/github-brands.svg" width="40" />
+			<img id="chess" src="./navbar icons/chess-solid.svg" width="40" />
+		</div>
+		<div class="navbarBackground"></div>
 	</body>
 	<script src="script.js"></script>
 </html>
