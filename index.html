@@ -9,14 +9,27 @@
 	</head>
 	<body>
 		<input type="text" class="searchBox" id="searchBox" />
-		<button class="searchButton" id="searchButton">Search</button>
 	</body>
 	<script>
 		let searchBox = document.getElementById("searchBox");
-		let searchButton = document.getElementById("searchButton");
 
-		searchButton.addEventListener("click", function () {
-			alert(searchBox.value);
+		searchBox.addEventListener("keyup", ({ key }) => {
+			if (key === "Enter") {
+				let searchQuery = searchBox.value;
+				let searchWords = searchQuery.split(" ");
+				let searchQueryFormatted = "";
+
+				searchWords.map((word) => {
+					if (word !== searchWords[0]) {
+						searchQueryFormatted += "+" + word;
+					} else {
+						searchQueryFormatted += word;
+					}
+				});
+
+				//console.log(searchQueryFormatted);
+				window.location = `https://www.google.com/search?q=${searchQueryFormatted}`;
+			}
 		});
 	</script>
 </html>
